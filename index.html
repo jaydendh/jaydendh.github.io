@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayden Hill | Cloud Security & DevSecOps</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --accent-hover: #79c0ff;
+            --green: #3fb950;
+            --red: #f85149;
+            --purple: #bc8cff;
+            --orange: #d29922;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 0 60px;
+            border-bottom: 1px solid var(--border);
+        }
+        .hero h1 { font-size: 2.8em; font-weight: 700; margin-bottom: 8px; }
+        .hero .tagline {
+            font-size: 1.2em;
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .hero p { color: var(--text-muted); max-width: 600px; margin: 0 auto 24px; font-size: 1.05em; }
+        .hero-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .hero-links a {
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: all 0.2s;
+        }
+        .btn-primary { background: var(--accent); color: var(--bg); }
+        .btn-primary:hover { background: var(--accent-hover); }
+        .btn-outline { border: 1px solid var(--border); color: var(--text); }
+        .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+        /* Sections */
+        section { padding: 60px 0; border-bottom: 1px solid var(--border); }
+        section:last-child { border-bottom: none; }
+        h2 {
+            font-size: 1.6em;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h2 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+
+        /* Certs */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+        }
+        .cert {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            transition: border-color 0.2s;
+        }
+        .cert:hover { border-color: var(--accent); }
+        .cert-name { font-weight: 600; font-size: 0.95em; }
+        .cert-issuer { color: var(--text-muted); font-size: 0.8em; margin-top: 4px; }
+        .cert a { color: var(--text); text-decoration: none; }
+
+        /* Projects */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+        }
+        .project {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            transition: border-color 0.2s, transform 0.2s;
+            text-decoration: none;
+            color: var(--text);
+            display: block;
+        }
+        .project:hover { border-color: var(--accent); transform: translateY(-2px); }
+        .project-category {
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .project-category.cloud { color: var(--accent); }
+        .project-category.lab { color: var(--green); }
+        .project h3 { font-size: 1.05em; margin-bottom: 8px; }
+        .project p { color: var(--text-muted); font-size: 0.9em; margin-bottom: 12px; }
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .tech-tag {
+            background: rgba(88, 166, 255, 0.1);
+            color: var(--accent);
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 500;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .skill-group { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; }
+        .skill-group h3 { font-size: 0.9em; color: var(--accent); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .skill-tag {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.85em;
+            color: var(--text-muted);
+        }
+
+        /* Experience */
+        .experience {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 28px;
+        }
+        .exp-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+        .exp-title { font-size: 1.1em; font-weight: 600; }
+        .exp-company { color: var(--accent); }
+        .exp-date { color: var(--text-muted); font-size: 0.9em; }
+        .exp-bullets { list-style: none; padding: 0; }
+        .exp-bullets li {
+            padding: 6px 0 6px 20px;
+            position: relative;
+            color: var(--text-muted);
+            font-size: 0.95em;
+        }
+        .exp-bullets li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 14px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--border);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.85em;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2em; }
+            .project-grid { grid-template-columns: 1fr; }
+            .cert-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="hero">
+        <h1>Jayden Hill</h1>
+        <div class="tagline">Cloud Security & DevSecOps Engineer</div>
+        <p>Building and securing cloud infrastructure for DoD environments. Azure migrations, CMMC/NIST compliance, and security automation.</p>
+        <div class="hero-links">
+            <a href="https://www.linkedin.com/in/jaydenhill" class="btn-primary">LinkedIn</a>
+            <a href="https://github.com/jaydendh" class="btn-outline">GitHub</a>
+            <a href="mailto:jayden.d.h04@gmail.com" class="btn-outline">Contact</a>
+        </div>
+    </header>
+
+    <section>
+        <h2><span class="dot"></span>Certifications</h2>
+        <div class="cert-grid">
+            <div class="cert"><a href="https://www.credly.com/users/jaydendh"><div class="cert-name">CompTIA CySA+</div><div class="cert-issuer">Cybersecurity Analyst</div></a></div>
+            <div class="cert"><a href="https://www.credly.com/badges/aa112932-79d3-4bfb-9e5a-2251abcbb71f/public_url"><div class="cert-name">CompTIA Security+</div><div class="cert-issuer">Security Fundamentals</div></a></div>
+            <div class="cert"><a href="https://www.credly.com/badges/8e79ce47-c453-4ede-9813-7f68effddfe1/public_url"><div class="cert-name">CompTIA Network+</div><div class="cert-issuer">Networking</div></a></div>
+            <div class="cert"><a href="https://www.credly.com/badges/7a63b311-913c-4de8-8f73-d20db31c66d2/public_url"><div class="cert-name">CompTIA A+</div><div class="cert-issuer">IT Fundamentals</div></a></div>
+            <div class="cert"><a href="https://www.credly.com/users/jaydendh"><div class="cert-name">CompTIA PenTest+</div><div class="cert-issuer">Penetration Testing</div></a></div>
+            <div class="cert"><div class="cert-name">ITIL Foundations</div><div class="cert-issuer">IT Service Management</div></div>
+            <div class="cert"><div class="cert-name">LPI Linux Essentials</div><div class="cert-issuer">Linux Professional Institute</div></div>
+        </div>
+    </section>
+
+    <section>
+        <h2><span class="dot"></span>Projects</h2>
+        <div class="project-grid">
+            <a href="https://github.com/jaydendh/Azure-Zero-Trust-Hub-Networking" class="project">
+                <div class="project-category cloud">Cloud Security</div>
+                <h3>Azure Zero Trust Networking</h3>
+                <p>Hub-and-spoke architecture with Bastion, NSGs, zero public IPs, and explicit deny-by-default traffic rules.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Azure</span>
+                    <span class="tech-tag">Bastion</span>
+                    <span class="tech-tag">NSG</span>
+                    <span class="tech-tag">VNet</span>
+                </div>
+            </a>
+            <a href="https://github.com/jaydendh/Azure-Identity-Centric-Security-Logging" class="project">
+                <div class="project-category cloud">Cloud Security</div>
+                <h3>Azure Identity Security & Logging</h3>
+                <p>Identity-first cloud security with Entra ID monitoring, MFA enforcement, and KQL-based log investigations.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Entra ID</span>
+                    <span class="tech-tag">Log Analytics</span>
+                    <span class="tech-tag">KQL</span>
+                </div>
+            </a>
+            <a href="https://github.com/jaydendh/HomeLab-SOC-Environment" class="project">
+                <div class="project-category lab">Home Lab</div>
+                <h3>SOC Environment</h3>
+                <p>Two-node Proxmox virtualized SOC for threat detection, incident response, and malware analysis with isolated VLANs.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Proxmox</span>
+                    <span class="tech-tag">Windows Server</span>
+                    <span class="tech-tag">Kali</span>
+                </div>
+            </a>
+            <a href="https://github.com/jaydendh/Active-Directory-Lab" class="project">
+                <div class="project-category lab">Home Lab</div>
+                <h3>Active Directory Lab</h3>
+                <p>AD DS for identity and access management with GPOs, RBAC, and incident response scenario simulation.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">AD DS</span>
+                    <span class="tech-tag">GPO</span>
+                    <span class="tech-tag">RBAC</span>
+                </div>
+            </a>
+            <a href="https://github.com/jaydendh/AdGuard-DNS-Security-Server" class="project">
+                <div class="project-category lab">Home Lab</div>
+                <h3>DNS Security Server</h3>
+                <p>Network-wide AdGuard DNS for domain filtering, DNS sinkholing, C2 blocking, and DoH encryption.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">AdGuard</span>
+                    <span class="tech-tag">DNS</span>
+                    <span class="tech-tag">DoH</span>
+                </div>
+            </a>
+            <a href="https://github.com/jaydendh/Secure-VPN-Gateway" class="project">
+                <div class="project-category lab">Home Lab</div>
+                <h3>Secure VPN Gateway</h3>
+                <p>Encrypted remote access with VPN tunneling, firewall rules, and least-privilege access controls.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">VPN</span>
+                    <span class="tech-tag">Firewall</span>
+                    <span class="tech-tag">ACL</span>
+                </div>
+            </a>
+            <a href="https://github.com/jaydendh/NextCloud-Server-Setup" class="project">
+                <div class="project-category lab">Home Lab</div>
+                <h3>Nextcloud Private Cloud</h3>
+                <p>Self-hosted cloud storage with E2E encryption, Cloudflare DNS, and Tailscale VPN for zero-trust access.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Nextcloud</span>
+                    <span class="tech-tag">Cloudflare</span>
+                    <span class="tech-tag">Tailscale</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section>
+        <h2><span class="dot"></span>Experience</h2>
+        <div class="experience">
+            <div class="exp-header">
+                <div>
+                    <span class="exp-title">IT Security </span>
+                    <span class="exp-company">| Chloeta | Oklahoma City, OK</span>
+                </div>
+                <span class="exp-date">June 2025 - Present</span>
+            </div>
+            <ul class="exp-bullets">
+                <li>Review Arctic Wolf threat intelligence; analyze SIEM/firewall logs for malicious IPs and coordinate malware scans based on IOCs</li>
+                <li>Vulnerability scanning across 100+ endpoints with full system reimaging for confirmed infections</li>
+                <li>Architect CMMC Level 2 / NIST 800-171 compliant cloud environment for DoD CUI</li>
+                <li>Lead VMware-to-Azure cloud migration ensuring security baselines, IAM, encryption, and segmentation</li>
+                <li>Develop security policies, SOPs, and incident response playbooks for CMMC/NIST compliance</li>
+                <li>Configure VPN tunneling and VLAN segmentation to reduce attack surface</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2><span class="dot"></span>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-group">
+                <h3>Security</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">SIEM</span>
+                    <span class="skill-tag">Threat Detection</span>
+                    <span class="skill-tag">Incident Response</span>
+                    <span class="skill-tag">Vulnerability Scanning</span>
+                    <span class="skill-tag">Malware Analysis</span>
+                    <span class="skill-tag">EDR</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Cloud & IAM</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Azure</span>
+                    <span class="skill-tag">VMware</span>
+                    <span class="skill-tag">Proxmox</span>
+                    <span class="skill-tag">Active Directory</span>
+                    <span class="skill-tag">Entra ID</span>
+                    <span class="skill-tag">RBAC</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Compliance</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">NIST 800-171</span>
+                    <span class="skill-tag">CMMC Level 2</span>
+                    <span class="skill-tag">MITRE ATT&CK</span>
+                    <span class="skill-tag">ITIL</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Networking</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">VLANs</span>
+                    <span class="skill-tag">VPN</span>
+                    <span class="skill-tag">Firewalls</span>
+                    <span class="skill-tag">DNS</span>
+                    <span class="skill-tag">Network Segmentation</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>OS & Scripting</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Windows Server</span>
+                    <span class="skill-tag">Ubuntu</span>
+                    <span class="skill-tag">Kali Linux</span>
+                    <span class="skill-tag">PowerShell</span>
+                    <span class="skill-tag">Bash</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Tools</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Arctic Wolf</span>
+                    <span class="skill-tag">ServiceNow</span>
+                    <span class="skill-tag">Cloudflare</span>
+                    <span class="skill-tag">Tailscale</span>
+                    <span class="skill-tag">Docker</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="container">
+        <p>Jayden Hill | <a href="https://github.com/jaydendh">GitHub</a> | <a href="https://www.linkedin.com/in/jaydenhill">LinkedIn</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
