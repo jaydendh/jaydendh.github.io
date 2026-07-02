@@ -215,9 +215,7 @@
             <div class="cert"><a href="https://www.credly.com/users/jaydendh"><div class="cert-name">CompTIA CySA+</div><div class="cert-issuer">Cybersecurity Analyst</div></a></div>
             <div class="cert"><a href="https://www.credly.com/badges/aa112932-79d3-4bfb-9e5a-2251abcbb71f/public_url"><div class="cert-name">CompTIA Security+</div><div class="cert-issuer">Security Fundamentals</div></a></div>
             <div class="cert"><a href="https://www.credly.com/badges/8e79ce47-c453-4ede-9813-7f68effddfe1/public_url"><div class="cert-name">CompTIA Network+</div><div class="cert-issuer">Networking</div></a></div>
-            <div class="cert"><a href="https://www.credly.com/badges/7a63b311-913c-4de8-8f73-d20db31c66d2/public_url"><div class="cert-name">CompTIA A+</div><div class="cert-issuer">IT Fundamentals</div></a></div>
             <div class="cert"><a href="https://www.credly.com/users/jaydendh"><div class="cert-name">CompTIA PenTest+</div><div class="cert-issuer">Penetration Testing</div></a></div>
-            <div class="cert"><div class="cert-name">ITIL Foundations</div><div class="cert-issuer">IT Service Management</div></div>
             <div class="cert"><div class="cert-name">LPI Linux Essentials</div><div class="cert-issuer">Linux Professional Institute</div></div>
         </div>
     </section>
@@ -360,54 +358,59 @@
 
     <section>
         <h2><span class="dot"></span>Experience</h2>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
 
-        <div class="experience" style="margin-bottom: 16px;">
+        <div class="experience">
             <div class="exp-header">
                 <div>
-                    <span class="exp-title">Information Technology Specialist</span>
-                    <span class="exp-company">| Chloeta | Oklahoma City, OK</span>
+                    <span class="exp-title">Cloud Infrastructure Engineer</span>
+                    <span class="exp-company">| Chloeta</span>
                 </div>
-                <span class="exp-date">2024 - Present</span>
+                <span class="exp-date">June 2025 – Present · Oklahoma City, OK</span>
             </div>
             <ul class="exp-bullets">
-                <li>Designed and deployed a Zero Trust hub-and-spoke Azure environment with identity-centric security logging, NSGs, and Azure AD Conditional Access to enforce least-privilege access across the organization</li>
-                <li>Provisioned and secured Azure SFTP servers for encrypted, audited file exchange of sensitive employee and vendor data for partners including ZapPro, Liberty Mutual, Rain, and ADP; implemented key-based authentication and storage-level encryption at rest</li>
-                <li>Built and maintained a segmented Azure dev environment hosting sensitive Chloeta data, supporting ArcGIS workflows, Liberty Mutual integration, and an internally hosted web server; enforced network isolation via VNet peering and NSG rules</li>
-                <li>Monitored security events using Arctic Wolf SIEM; triaged and investigated incidents, correlated firewall logs, and escalated confirmed threats per established runbooks</li>
-                <li>Conducted endpoint vulnerability scanning and managed patch deployment via Patch My PC and Microsoft Intune MDM; tracked and remediated findings to maintain CMMC Level 2 compliance posture</li>
-                <li>Supported NIST 800-171 compliance including access control reviews, audit log configuration, and configuration management documentation for government-adjacent client environments</li>
-                <li>Deployed and managed applications across enterprise endpoints using Intune MDM; maintained device compliance policies and conditional access enforcement</li>
-            </ul>
-        </div>
-
-        <div class="experience" style="margin-bottom: 16px;">
-            <div class="exp-header">
-                <div>
-                    <span class="exp-title">Cybersecurity Specialist (Federal Contractor)</span>
-                    <span class="exp-company">| Chloeta – USDA Forest Service | Remote</span>
-                </div>
-                <span class="exp-date">2025</span>
-            </div>
-            <ul class="exp-bullets">
-                <li>Served as a federal cybersecurity contractor supporting the USDA Forest Service, focusing on compliance workflow automation and security documentation</li>
-                <li>Developed custom GPT-powered tools to automate cybersecurity and compliance workflows, reducing manual effort in policy review, audit preparation, and control documentation</li>
-                <li>Produced technical documentation aligned with federal cybersecurity standards to support ongoing assessment and authorization (A&amp;A) activities</li>
+                <li>Deployed and maintained production Azure infrastructure including Azure Firewall, NSGs, Log Analytics, and Microsoft Sentinel; delivered enterprise-grade threat detection, centralized security logging, and network policy enforcement across cloud workloads</li>
+                <li>Engineered multiple Azure environments using Terraform IaC — including a secure SFTP platform, a file-ingestion pipeline with Blob Storage, Private Endpoints, Managed Identity, and RBAC controls, and a Kali Linux penetration testing lab with Azure Bastion and subnet-level NSG segmentation</li>
+                <li>Designed and built warehouse network infrastructure from the ground up using FortiGate firewall and Aruba switches; engineered VLAN segmentation, custom subnet architecture, and a Tailscale VPN overlay providing secure out-of-band remote management</li>
+                <li>Authored IT department standard operating procedures and security policies; developed CMMC Level 2 compliant cloud enclave documentation including control implementation narratives, system security plans, and CUI handling procedures aligned to NIST 800-171</li>
+                <li>Administered endpoint and identity lifecycle using Microsoft Intune and IBM MaaS360; provisioned and onboarded new users across workstations and mobile devices, enforced MDM security policies, managed application deployments, and performed password resets and account management across Active Directory and Microsoft 365</li>
+                <li>Delivered Level 1 and Level 2 help desk support resolving hardware, software, and network issues across end-user environments; coordinated with ISP and third-party vendors for outage resolution, firewall reviews, and penetration testing engagements</li>
             </ul>
         </div>
 
         <div class="experience">
             <div class="exp-header">
                 <div>
-                    <span class="exp-title">Network Security Consultant</span>
-                    <span class="exp-company">| Lumora IT | Remote</span>
+                    <span class="exp-title">Cloud Engineer</span>
+                    <span class="exp-company">| Jefe Consulting LLC</span>
                 </div>
-                <span class="exp-date">2025 - Present</span>
+                <span class="exp-date">January 2024 – June 2025 · Remote, VA</span>
             </div>
             <ul class="exp-bullets">
-                <li>Provided network security consulting services on a contract basis, advising clients on secure network architecture, firewall policy, and vulnerability management</li>
-                <li>Assessed client environments for security gaps and recommended remediation steps aligned with industry best practices and applicable compliance frameworks</li>
-                <li>Supported network design and segmentation reviews to reduce attack surface and improve visibility into traffic flows</li>
+                <li>Automated the deployment of high-availability cloud environments using Terraform and GitHub Actions to provision foundational resources for 10+ business-critical applications</li>
+                <li>Architected secure network foundations by configuring Virtual Networks, subnets, and Network Security Groups (NSGs) to isolate and protect traffic for 20+ production-grade servers</li>
+                <li>Modernized data tier architecture by migrating legacy VM-hosted databases to Azure SQL Database to improve scalability and performance for 5+ enterprise services</li>
+                <li>Secured application secrets and connection strings using Azure Key Vault and Managed Identities to eliminate hardcoded credentials for 15+ production applications</li>
+                <li>Established enterprise identity governance by managing users and groups within Microsoft Entra ID to enforce strict RBAC for 100+ internal employees</li>
+                <li>Monitored cloud expenditure and resource health using Azure Cost Management and Azure Monitor to reduce monthly operational spend by 20% across the tenant</li>
             </ul>
+        </div>
+
+        <div class="experience">
+            <div class="exp-header">
+                <div>
+                    <span class="exp-title">Store Worker</span>
+                    <span class="exp-company">| DeCA – Defense Commissary Agency</span>
+                </div>
+                <span class="exp-date">April 2021 – January 2024 · Tinker AFB, OK</span>
+            </div>
+            <ul class="exp-bullets">
+                <li>Operated NCR database systems on a DoD installation for real-time inventory tracking; demonstrated attention to detail and data accuracy in compliance with DoD operational standards</li>
+                <li>Troubleshot technical issues with point-of-sale and inventory management systems; identified root causes and implemented solutions with minimal operational disruption</li>
+                <li>Performed service operations on a DoD military installation, maintaining high service standards and proactive resolution of operational issues in a security-conscious federal environment</li>
+            </ul>
+        </div>
+
         </div>
     </section>
 
@@ -415,66 +418,70 @@
         <h2><span class="dot"></span>Skills</h2>
         <div class="skills-grid">
             <div class="skill-group">
+                <h3>Cloud &amp; IaC</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Azure Firewall</span>
+                    <span class="skill-tag">NSGs</span>
+                    <span class="skill-tag">Sentinel</span>
+                    <span class="skill-tag">RBAC</span>
+                    <span class="skill-tag">Azure VMs</span>
+                    <span class="skill-tag">SFTP</span>
+                    <span class="skill-tag">Terraform</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Proxmox</span>
+                    <span class="skill-tag">Tailscale</span>
+                    <span class="skill-tag">Cloudflare Tunnels</span>
+                </div>
+            </div>
+            <div class="skill-group">
                 <h3>Security</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">SIEM</span>
-                    <span class="skill-tag">Threat Detection</span>
-                    <span class="skill-tag">Incident Response</span>
-                    <span class="skill-tag">Vulnerability Scanning</span>
-                    <span class="skill-tag">Malware Analysis</span>
-                    <span class="skill-tag">EDR</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3>Cloud & IAM</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Azure</span>
-                    <span class="skill-tag">VMware</span>
-                    <span class="skill-tag">Proxmox</span>
-                    <span class="skill-tag">Active Directory</span>
-                    <span class="skill-tag">Entra ID</span>
-                    <span class="skill-tag">RBAC</span>
-                    <span class="skill-tag">M365</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3>Compliance</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">NIST 800-171</span>
+                    <span class="skill-tag">Microsoft Sentinel</span>
+                    <span class="skill-tag">Arctic Wolf</span>
+                    <span class="skill-tag">SIEM/SOAR</span>
+                    <span class="skill-tag">IDS/IPS</span>
                     <span class="skill-tag">CMMC Level 2</span>
-                    <span class="skill-tag">MITRE ATT&CK</span>
-                    <span class="skill-tag">ITIL</span>
+                    <span class="skill-tag">NIST 800-171</span>
+                    <span class="skill-tag">KQL</span>
+                    <span class="skill-tag">Incident Response</span>
+                    <span class="skill-tag">Vulnerability Assessment</span>
+                    <span class="skill-tag">Defense-in-Depth</span>
                 </div>
             </div>
             <div class="skill-group">
                 <h3>Networking</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">VLANs</span>
+                    <span class="skill-tag">LAN/WAN</span>
                     <span class="skill-tag">VPN</span>
-                    <span class="skill-tag">Firewalls</span>
-                    <span class="skill-tag">DNS</span>
-                    <span class="skill-tag">Network Segmentation</span>
+                    <span class="skill-tag">FortiGate</span>
+                    <span class="skill-tag">Aruba</span>
+                    <span class="skill-tag">VLAN Segmentation</span>
+                    <span class="skill-tag">Firewall Rules</span>
+                    <span class="skill-tag">Out-of-Band Management</span>
+                    <span class="skill-tag">TCP/IP</span>
                 </div>
             </div>
             <div class="skill-group">
-                <h3>OS & Scripting</h3>
+                <h3>Identity &amp; Endpoint</h3>
                 <div class="skill-tags">
+                    <span class="skill-tag">Active Directory</span>
+                    <span class="skill-tag">Microsoft Entra ID</span>
+                    <span class="skill-tag">Intune MDM</span>
+                    <span class="skill-tag">IBM MaaS360</span>
+                    <span class="skill-tag">Patch My PC</span>
+                    <span class="skill-tag">Microsoft 365</span>
                     <span class="skill-tag">Windows Server</span>
-                    <span class="skill-tag">Ubuntu</span>
-                    <span class="skill-tag">Kali Linux</span>
-                    <span class="skill-tag">PowerShell</span>
-                    <span class="skill-tag">Bash</span>
+                    <span class="skill-tag">AD/DNS/DHCP/GPO</span>
                 </div>
             </div>
             <div class="skill-group">
-                <h3>Tools</h3>
+                <h3>Dev &amp; Scripting</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">Arctic Wolf</span>
-                    <span class="skill-tag">ServiceNow</span>
-                    <span class="skill-tag">Cloudflare</span>
-                    <span class="skill-tag">Tailscale</span>
-                    <span class="skill-tag">Terraform</span>
-                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Bash</span>
+                    <span class="skill-tag">PowerShell</span>
+                    <span class="skill-tag">Linux (Ubuntu, RHEL)</span>
+                    <span class="skill-tag">Git</span>
                 </div>
             </div>
         </div>
@@ -482,22 +489,26 @@
 
     <section>
         <h2><span class="dot"></span>Education</h2>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+
         <div class="experience">
             <div class="exp-header">
                 <div>
                     <span class="exp-title">B.S. Cybersecurity and Information Assurance</span>
-                    <span class="exp-company">| Western Governors University (WGU)</span>
+                    <span class="exp-company">| Western Governors University</span>
                 </div>
-                
             </div>
-            <ul class="exp-bullets">
-                <li>Network and Security Foundations</li>
-                <li>Cyber Defense and Countermeasures</li>
-                <li>Threat Analysis and Incident Response</li>
-                <li>Security Operations and Monitoring</li>
-                <li>Cloud Security</li>
-                <li>Compliance and Assessment</li>
-            </ul>
+        </div>
+
+        <div class="experience">
+            <div class="exp-header">
+                <div>
+                    <span class="exp-title">M.S. Software Engineering – DevOps Engineering</span>
+                    <span class="exp-company">| Western Governors University</span>
+                </div>
+            </div>
+        </div>
+
         </div>
     </section>
 </div>
